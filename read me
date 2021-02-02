@@ -1,0 +1,56 @@
+*we build this compression service with python3 and tkinter
+*we   tested this on linux based platforms
+*to install the above required packages
+		$sudo apt install python3
+
+		$sudo apt install python3-pip
+
+		$pip install tkinter
+			(or)
+		$sudo apt-get install python3-pil.imagetk
+
+
+there are two folders server and client
+
+*server folder 
+	*This folder contains testserver.py and huffman.py
+	*Huffman.py is compression algo
+
+	****path changes****
+	In testserver.py line 41,77 you need to change the path in the " " given below(/home/jasho007/Desktop/SUBMISSION/client part you need to change).
+
+	path = "/home/jasho007/Desktop/SUBMISSION/client/"+fname10+'_recieved.txt'
+
+	
+
+*client folder
+	*This folder contains testclient.py testdclient.py testcheckserver.py testexit.py guitest1.py
+
+	  ****path changes****
+	  testgui1.py line 135,161 you need to change the path in the initialdir given below 
+
+	  filename = filedialog.askopenfilename(initialdir="/home/jasho007/Desktop/SUBMISSION/client/", title="Select A File", filetypes=(("txt files", "*.txt"),("all files", "*.*")))
+
+**after checking files and changing paths in respective folders** 
+	*Inorder to run the server you need to open the terminal in that folder(server) and use this command $python3 testserver.py
+	*Inorder to run the client you need to open the terminal in that folder(client) and use this command $python3 testgui1.py
+
+	*if in local machine IP address is 127.0.0.1 else you need to know the IP address of the server.
+
+#if client sends sample.txt after compression client will get two files sample.bin and sample.json
+
+#if client sends sample.bin sample.json is selected automatically after decompression client will get sample_decompressed.txt
+
+
+***INSTRUCTIONS for operating gui***
+		#enter the IP address and press OK button  to check the server is online or not
+		#for compression press "compress" button
+			#for file info press "show compressed" button
+
+		#for decompression press "decompress" button
+			#for file info press "show decompressed" button
+
+		#for exit use "exit" button at top right 
+
+
+#for better understanding see the screenshots
